@@ -18,7 +18,7 @@ import (
 // DefaultPrefix is the application specific prefix attached to all DHT protocols by default.
 const DefaultPrefix protocol.ID = "/ipfs"
 
-const defaultBucketSize = 20
+const defaultBucketSize = 4
 
 // ModeOpt describes what mode the dht should operate in
 type ModeOpt int
@@ -111,7 +111,7 @@ var Defaults = func(o *Config) error {
 
 	o.RoutingTable.LatencyTolerance = time.Minute
 	o.RoutingTable.RefreshQueryTimeout = 1 * time.Minute
-	o.RoutingTable.RefreshInterval = 10 * time.Minute
+	o.RoutingTable.RefreshInterval = 1000 * time.Minute
 	o.RoutingTable.AutoRefresh = true
 	o.RoutingTable.PeerFilter = EmptyRTFilter
 	o.MaxRecordAge = time.Hour * 36

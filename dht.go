@@ -187,7 +187,7 @@ func New(ctx context.Context, h host.Host, options ...Option) (*IpfsDHT, error) 
 	dht.maxRecordAge = cfg.MaxRecordAge
 	dht.enableProviders = cfg.EnableProviders
 	dht.enableValues = cfg.EnableValues
-	dht.disableFixLowPeers = cfg.DisableFixLowPeers
+	dht.disableFixLowPeers = true // cfg.DisableFixLowPeers
 
 	dht.Validator = cfg.Validator
 	dht.msgSender = net.NewMessageSenderImpl(h, dht.protocols)
