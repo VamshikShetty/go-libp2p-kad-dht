@@ -297,6 +297,7 @@ func (q *query) run() {
 		// try spawning the queries, if there are no available peers to query then we won't spawn them
 		for _, p := range qPeers {
 			q.spawnQuery(pathCtx, cause, p, ch)
+			break
 		}
 	}
 }
