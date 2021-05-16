@@ -18,7 +18,7 @@ import (
 // DefaultPrefix is the application specific prefix attached to all DHT protocols by default.
 const DefaultPrefix protocol.ID = "/ipfs"
 
-const defaultBucketSize = 2
+const defaultBucketSize = 20
 
 // ModeOpt describes what mode the dht should operate in
 type ModeOpt int

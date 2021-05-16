@@ -14,7 +14,7 @@ var DefaultBootstrapPeers []multiaddr.Multiaddr
 
 // Minimum number of peers in the routing table. If we drop below this and we
 // see a new peer, we trigger a bootstrap round.
-var minRTRefreshThreshold = 2
+var minRTRefreshThreshold = 10
 
 const (
 	periodicBootstrapInterval = 1200 * time.Minute
